@@ -27,7 +27,7 @@ Há basicamente dois tipos de argumentos enquanto a forma que são passados a um
 Uma função pode receber mais de um argumento - com ou sem limites em sua quantidade - dependendo da assinatura dela.
 Por exemplo, `end` e `sep` são argumentos nomeados na seguinte chamada:
 ~~~python
-print("Hello ", sep="Wor", end="ld!\n")
+print("Hello ", "", sep="Wor", end="ld!\n")
 ~~~
 Não se esqueça do caractere de nova linha, pois comportamento de `print` muda ao definir `end` - ela não imprime o caractere de nova linha por padrão, ao invés é necessário declará-lo explícitamente.
 Enquanto agora `greetings` e `its_name` são argumentos posicionais na seguinte chamada:
