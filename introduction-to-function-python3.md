@@ -46,13 +46,13 @@ Uma função pode ser declarada usando a palavra reservada `def`, seguida por su
 def sum(a, b):
 	return a + b
 ~~~
-Primeiro coloca-se `def`, em seguida seu nome e sua assinatura. Ela, por sua vez, é colocada entre parêntes, depois coloca-se os dois ponto indicando o começo de um bloco.
+Primeiro coloca-se `def`, em seguida seu nome e sua assinatura. Ela, por sua vez, é colocada entre parênteses, depois se coloca os dois pontos indicando o começo de um bloco.
 Na segunda linha, como em qualque bloco, as expressões são precessidas por uma identação, chamada de indentação do bloco, podem haver mais de uma expressão no mesmo bloco, em cada linha com o mesmo nível de indentação. A palavra chave `return` serve para indicar o retorno. 
 # A assinatura de uma função
 Tente a seguinte linha de código em modo interativo:
 ~~~python
->>> def sum(a, b):
-...	return a + b
+>>>	def sum(a, b):
+...		return a + b
 ...
 >>> sum(10, 5)
 ~~~
@@ -63,11 +63,11 @@ def sum(a, b):
 
 print(sum(10, 5))
 ~~~
-Como você pode perceber, uma função também é uma expressão, e como tal, o valor de retorno pode ser repassado a outra função, isto é, pode ocorrer uma chamada aninhada. Neste caso, a expressão dentro dos parênteses é avalida primeiro, como qualquer expressão, para se determinar o valor que será repassado a outra função.
+Como você pode perceber, uma função também é uma expressão, e como tal, o valor de retorno pode ser repassado a outra função, isto é, pode ocorrer uma chamada aninhada. Neste caso, a expressão dentro dos parâmetro é avalida primeiro, como qualquer expressão, para se determinar o valor que será repassado a outra função.
 Considere a seguinte linha de código em modo interativo:
 ~~~python
->>> def sum(a, b):
-...	return a + b
+>>>	def sum(a, b):
+...		return a + b
 >>> sum(1, 6)
 ~~~
 O resultado seria algo como:
@@ -78,3 +78,32 @@ File "<stdin>", line 3
 SyntaxError: invalid syntax
 ~~~
 Isto ocorre porque o interpretador expera uma expressão indentada dento do bloco da declaração da função, para evitar isso, recomenda-se sempre colocar uma nova linha (até aparecer `>>>`) após a declaração de uma função.
+# Argumentos posicionais ou nomeados
+Argumentos podem ser posicionais ou nomeados, bem como ambos. Por exemplo, com a seguinte função tente:
+~~~python
+def prod(a, b):
+	return a * b
+
+print(prod(10, 11))
+print(prod(10, b=12))
+print(prod(a=11, b=15))
+~~~
+Neste caso, `a` e `b` são tanto posicionais quanto nomeados. Tente, então a seguinte linha de código
+~~~python
+print(prod(b=11, 12))
+~~~
+você provalvemente obterá o seguinte erro:
+~~~
+  File "<stdin>", line 1
+    print(prod(b=11, 12))
+                       ^
+SyntaxError: positional argument follows keyword argument
+~~~
+Como você pode esperar, argumentos posicionais são sempre definidos primeiro
+# A ordem dos parâmetro e argumentos:
+Considere a seguinte linha de código:
+~~~
+def log_msg(a, b):
+	print("Expected 'a':", a)
+	print("Expected 'b':", b)
+~~~
