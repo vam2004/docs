@@ -99,7 +99,7 @@ você provalvemente obterá o seguinte erro:
                        ^
 SyntaxError: positional argument follows keyword argument
 ~~~
-Como você pode esperar, argumentos posicionais são sempre definidos primeiro
+Como você pode esperar, argumentos posicionais são sempre passado primeiro
 # A ordem dos parâmetro e argumentos:
 Considere a seguinte linha de código:
 ~~~
