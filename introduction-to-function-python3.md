@@ -51,8 +51,8 @@ Na segunda linha, como em qualque bloco, as expressões são precessidas por uma
 # A assinatura de uma função
 Tente a seguinte linha de código em modo interativo:
 ~~~python
->>>	def sum(a, b):
-...		return a + b
+>>>def sum(a, b):
+...	return a + b
 ...
 >>> sum(10, 5)
 ~~~
@@ -66,7 +66,7 @@ print(sum(10, 5))
 Como você pode perceber, uma função também é uma expressão, e como tal, o valor de retorno pode ser repassado a outra função, isto é, pode ocorrer uma chamada aninhada. Neste caso, a expressão dentro dos parâmetro é avalida primeiro, como qualquer expressão, para se determinar o valor que será repassado a outra função.
 Considere a seguinte linha de código em modo interativo:
 ~~~python
->>>	def sum(a, b):
+>>>def sum(a, b):
 ...		return a + b
 >>> sum(1, 6)
 ~~~
