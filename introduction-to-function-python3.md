@@ -102,7 +102,7 @@ SyntaxError: positional argument follows keyword argument
 Como você pode esperar, argumentos posicionais são sempre passado primeiro
 # A ordem dos parâmetro e argumentos:
 Considere a seguinte linha de código:
-~~~
+~~~python
 def log_msg(a, b):
 	print("Expected 'a':", a)
 	print("Expected 'b':", b)
