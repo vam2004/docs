@@ -51,8 +51,8 @@ Na segunda linha, como em qualque bloco, as expressões são precessidas por uma
 # A assinatura de uma função
 Tente a seguinte linha de código em modo interativo:
 ~~~python
->>>	def sum(a, b):
-...		return a + b
+>>>def sum(a, b):
+...	return a + b
 ...
 >>> sum(10, 5)
 ~~~
