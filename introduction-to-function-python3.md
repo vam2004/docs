@@ -63,7 +63,7 @@ def sum(a, b):
 
 print(sum(10, 5))
 ~~~
-Como você pode perceber, uma função também é uma expressão, e como tal, o valor de retorno pode ser repassado a outra função, isto é, pode ocorrer uma chamada aninhada. Neste caso, a expressão dentro dos parâmetro é avalida primeiro, como qualquer expressão, para se determinar o valor que será repassado a outra função.
+Como você pode perceber, uma função também é uma expressão, e como tal, o valor de retorno pode ser repassado a outra função, isto é, pode ocorrer uma chamada aninhada. Neste caso, a expressão dentro dos parênteses é avalida primeiro, como qualquer expressão, para se determinar o valor que será repassado a outra função.
 Considere a seguinte linha de código em modo interativo:
 ~~~python
 >>> def sum(a, b):
