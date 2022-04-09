@@ -88,11 +88,11 @@ impl poo {
 		}
 	}
 	fn esta_classe(x: lang_text, outra: foo_classe) -> Self {
-		let esta_classe = Self {
+		let mut esta_classe = Self {
 			inner: lang_object::new()
 		};
 		esta_classe.inner._set("x", x);
-		esta_classe.inner._set("x", <foo_classe as static>::_get("x"));
+		esta_classe.inner._set("x", <foo_classe as static_class>::_get("x"));
 		return esta_classe;
 	}
 }
@@ -104,6 +104,8 @@ Assim, é necessário implementar dentro do tempo execução várias funcionalid
 - Os tipos primitivos será prefixados por `lang_`
 - Os métodos estáticos de uma classe são definidos como funções dentro de `impl`
 - A macro `build_static` constroi as proprieades estáticas que são acessivel através de uma `trait`
-- Para evitar ambiguidades
+- Para evitar confritos, o constrututor é um método estático de mesmo nome e a variável temporária que amarzena o objeto também possui o mesmo rótulo
+- A mutabilidade deveria ser inferida em tempo de tradução, definida numa cadeia de mutabilidade e baseada na referências das variáveis
 ## Especificação da linguagem
 - O retorno de uma função é baseado na sentença `como` da linguagem, seu tipo é inferido a partir disto, sendo necessário uma conversão de tipos quando a tipagem do valor fonte é desconhecida ou não confere com a tipagem do valor resultante
+- 
